@@ -1,0 +1,208 @@
+header {
+    width: 100%;
+    position: relative;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 100px;
+    z-index: 99;
+    .menu-content {
+        display: flex;
+        align-items: center;
+        gap: 70px;
+    }
+    .nav-items {
+        display: flex;
+    }
+    .nav-items li {
+        padding: 0 15px;
+    }
+    .nav-items li a {
+        font-size: 20px;
+        font-weight: 500;
+        color: rgb(0, 0, 0);
+        transition: color .3s ease-in-out;
+        position: relative;
+    }
+    .nav-items li a::after {
+        width: 0;
+        height: 2px;
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        background-color: rgb(0, 0, 0);
+        transition: width .3s ease-in-out;
+    }
+    .nav-items li a:hover::after {
+        width: 100%;
+    }
+    .logo a {
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: -1px;
+        color: rgb(0, 0, 0);
+    }
+    .menu-icon,
+    .cancel-icon {
+        color: rgb(0, 0, 0) !important;
+        text-align: center;
+        font-size: 18px;
+        cursor: pointer;
+        display: none;
+    }
+    .menu-icon span,
+    .cancel-icon {
+        display: none;
+    }
+    .dropdown {
+        margin-right: 38px;
+        img {
+            width: 35px;
+            height: 35px;
+        }
+        .az {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            img {
+                margin-right: 3px;
+            }
+        }
+        .rus {
+            cursor: pointer;
+        }
+    }
+    .dropbtn {
+        cursor: pointer;
+        transition: all .35s ease-in-out;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        overflow: auto;
+        z-index: 1;
+        margin-top: 6px;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown a:hover {
+        background-color: #ddd;
+    }
+    .show {
+        display: block;
+    }
+    .dropbtn.active {
+        transform: rotate(180deg);
+    }
+}
+
+@media (max-width: 1180px) {
+    nav {
+        width: 100%;
+        background-color: #ffff;
+        padding: 0 10px;
+        .nav-mobil-items {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-items {
+            position: fixed;
+            z-index: 999;
+            top: 70px;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            /* From https://css.glass */
+            background: rgb(255, 255, 255);
+            display: inline-block;
+            padding: 75px 50px 0 50px;
+            text-align: center;
+            transition: left .3s ease;
+        }
+        .nav-items.active {
+            left: 0%;
+        }
+        .nav-items li {
+            line-height: 40px;
+            margin: 30px 0;
+        }
+        .nav-items li a {
+            font-size: 25px;
+        }
+        .nav-items li a::after {
+            top: 35px;
+        }
+        .logo {
+            text-align: center;
+        }
+        .menu-icon {
+            display: block;
+            transition: transform .3s ease-in-out;
+            &:hover {
+                transform: scale(1.5);
+            }
+        }
+        .cancel-icon {
+            transition: transform .3s ease-in-out;
+            &:hover {
+                transform: scale(1.5);
+            }
+        }
+        .menu-icon span {
+            display: block;
+        }
+        .menu-icon span.hide {
+            display: none;
+        }
+        .cancel-icon.show {
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    nav {
+        .dropdown {
+            margin-right: 0;
+        }
+        .menu-icon,
+        .cancel-icon {
+            margin: 0 10px;
+            font-size: 16px;
+        }
+        .logo a {
+            font-size: 20px;
+        }
+        form {
+            right: 20px;
+        }
+    }
+    #head {
+        .head-container {
+            h1 {
+                font-size: 35px;
+            }
+        }
+    }
+}

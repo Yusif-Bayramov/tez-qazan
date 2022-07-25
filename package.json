@@ -1,0 +1,8 @@
+{
+    "dependencies": {
+        "sass": "^1.52.1"
+    },
+    "scripts": {
+        "compile": "sass --watch --no-source-map scss/import.scss css/main.css"
+    }
+}
