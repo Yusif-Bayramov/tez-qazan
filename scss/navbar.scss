@@ -7,11 +7,11 @@ nav {
     width: 100%;
     position: fixed;
     top: 0;
-    overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    background-color: #ffff;
     height: 70px;
     padding: 0 100px;
     z-index: 99;
@@ -94,15 +94,7 @@ nav {
     .dropdown-content {
         display: none;
         position: absolute;
-        overflow: auto;
-        z-index: 1;
         margin-top: 6px;
-    }
-    .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
     }
     .dropdown a:hover {
         background-color: #ddd;
@@ -118,7 +110,6 @@ nav {
 @media (max-width: 1180px) {
     nav {
         width: 100%;
-        background-color: #ffff;
         padding: 0 10px;
         .nav-mobil-items {
             width: 100%;
@@ -134,7 +125,7 @@ nav {
             width: 100%;
             height: 100vh;
             /* From https://css.glass */
-            background: rgb(255, 255, 255);
+            background: linear-gradient(320deg, #333333 0%, #FF4242 98.97%);
             display: inline-block;
             padding: 75px 50px 0 50px;
             text-align: center;
@@ -149,8 +140,10 @@ nav {
         }
         .nav-items li a {
             font-size: 25px;
+            color: #ffff;
         }
         .nav-items li a::after {
+            background-color: #ffff;
             top: 35px;
         }
         .logo {
@@ -167,9 +160,6 @@ nav {
             width: 100%;
             justify-content: flex-end;
             transition: transform .3s ease-in-out;
-            &:hover {
-                transform: scale(1.5);
-            }
         }
         .menu-icon span {
             display: block;
@@ -179,6 +169,9 @@ nav {
         }
         .cancel-icon.show {
             display: flex;
+        }
+        .dropdown {
+            color: rgb(255, 255, 255);
         }
     }
 }
