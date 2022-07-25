@@ -164,6 +164,8 @@ nav {
             }
         }
         .cancel-icon {
+            width: 100%;
+            justify-content: flex-end;
             transition: transform .3s ease-in-out;
             &:hover {
                 transform: scale(1.5);
@@ -176,7 +178,7 @@ nav {
             display: none;
         }
         .cancel-icon.show {
-            display: block;
+            display: flex;
         }
     }
 }
