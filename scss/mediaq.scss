@@ -1,0 +1,127 @@
+@media (max-width: 1180px) {
+    nav {
+        width: 100%;
+        padding: 0 10px;
+        .nav-mobil-items {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-items {
+            position: fixed;
+            z-index: 999;
+            top: 70px;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            /* From https://css.glass */
+            background: linear-gradient(320deg, #333333 0%, #FF4242 98.97%);
+            display: inline-block;
+            padding: 75px 50px 0 50px;
+            text-align: center;
+            transition: left .3s ease;
+        }
+        .nav-items.active {
+            left: 0%;
+        }
+        .nav-items li {
+            line-height: 40px;
+            margin: 30px 0;
+        }
+        .nav-items li a {
+            font-size: 25px;
+            color: #ffff;
+        }
+        .nav-items li a::after {
+            background-color: #ffff;
+            top: 35px;
+        }
+        .logo {
+            text-align: center;
+        }
+        .menu-icon {
+            display: block;
+            transition: transform .3s ease-in-out;
+            &:hover {
+                transform: scale(1.5);
+            }
+        }
+        .cancel-icon {
+            width: 100%;
+            justify-content: flex-end;
+            transition: transform .3s ease-in-out;
+        }
+        .menu-icon span {
+            display: block;
+        }
+        .menu-icon span.hide {
+            display: none;
+        }
+        .cancel-icon.show {
+            display: flex;
+        }
+        .dropdown {
+            color: rgb(255, 255, 255);
+        }
+    }
+    #header-content {
+        margin-top: 110px;
+        .container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        .header-img {
+            width: 280px;
+            height: 280px;
+            margin-top: 20px;
+        }
+        .header-text {
+            text-align: center;
+            h1 {
+                font-size: 41.9986px;
+                line-height: 56px;
+            }
+            h4 {
+                font-size: 16.7994px;
+                line-height: 20px;
+                text-align: center;
+                letter-spacing: 0.05em;
+            }
+            p {
+                font-size: 14.3995px;
+                line-height: 21px;
+            }
+            .header-btn {
+                font-size: 11.9717px;
+                line-height: 15px;
+                letter-spacing: 0.05em;
+            }
+        }
+        #carouselExampleSlidesOnly {
+            .carousel-display {
+                img {
+                    max-width: 60%;
+                }
+            }
+        }
+    }
+    #qalib-siyahsi {
+        .q-head-text {
+            h1 {
+                font-size: 30px;
+            }
+            h3 {
+                font-size: 20px;
+            }
+        }
+    }
+    table {
+        tr {
+            font-size: 10px;
+        }
+    }
+}
