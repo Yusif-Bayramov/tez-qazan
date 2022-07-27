@@ -2,6 +2,7 @@ const menuBtn = document.querySelector(".menu-icon span");
 
 const cancelBtn = document.querySelector(".cancel-icon");
 const items = document.querySelector(".nav-items");
+const li = document.querySelectorAll(".nav-items li");
 const form = document.querySelector("form");
 
 menuBtn.onclick = () => {
@@ -15,6 +16,13 @@ cancelBtn.onclick = () => {
     menuBtn.classList.remove("hide");
     cancelBtn.classList.remove("show");
     cancelBtn.style.color = "#ff3d00"
+}
+for (let lis of li) {
+    lis.onclick = () => {
+        items.classList.remove("active");
+        cancelBtn.classList.remove("show");
+        menuBtn.classList.remove("hide");
+    }
 }
 
 let dropdown = document.querySelector(".dropbtn");

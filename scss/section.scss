@@ -59,6 +59,7 @@
 /*accordion*/
 
 #accordion {
+    width: 100%;
     margin-top: 65px;
     .accordion-head-text {
         h1 {
@@ -209,5 +210,29 @@
             transform-origin: top center;
             transform: rotateX(0deg);
         }
+    }
+}
+
+
+/*istifade qaydalri*/
+
+#istifadeQaydlari {
+    margin-top: 65px;
+    padding-bottom: 25px;
+    width: 100%;
+    .header-btn {
+        margin-top: 0;
+        padding: 10px 45px;
+    }
+    .istfade-text {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    h1 {
+        font-weight: 600;
+        font-size: 50px;
+        text-align: center;
     }
 }
