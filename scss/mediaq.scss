@@ -144,3 +144,35 @@
         }
     }
 }
+
+@media (max-width: 500px) {
+    nav {
+        .dropdown {
+            margin-right: 0;
+        }
+        .menu-icon,
+        .cancel-icon {
+            margin: 0 10px;
+            font-size: 16px;
+        }
+        .logo a {
+            font-size: 20px;
+        }
+        form {
+            right: 20px;
+        }
+    }
+    #head {
+        .head-container {
+            h1 {
+                font-size: 35px;
+            }
+        }
+    }
+}
+
+@media (max-width: 664px) {
+    .form-c {
+        display: block;
+    }
+}
