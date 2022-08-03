@@ -494,7 +494,7 @@ nav .dropbtn.active {
   flex-direction: row;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   border-radius: 10px;
-  gap: 50px;
+  gap: 40px;
 }
 #main2 .card1 .img {
   padding: 10px;
@@ -717,8 +717,9 @@ nav .cancel-icon {
 
   #main2 .card1 {
     width: 280px;
-    height: 670px;
+    height: 620px;
     flex-direction: column;
+    padding-bottom: 5px;
   }
   #main2 .card1 .img {
     border-bottom-left-radius: 0;
