@@ -560,6 +560,28 @@ nav .dropbtn.active {
 #main2 .card1 .form-group label {
   color: #7E7E7E;
 }
+#main2 .card1 .form-group .form-number {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #000;
+}
+#main2 .card1 .form-group .form-number span {
+  font-weight: 600;
+}
+#main2 .card1 .form-group input {
+  border: none;
+  outline: none;
+  border-radius: 0;
+  font-weight: 500;
+  color: #000;
+}
+#main2 .card1 .form-group input:invalid {
+  color: rgb(255, 0, 0);
+}
+#main2 .card1 .form-group input:focus {
+  outline: none;
+  box-shadow: none;
+}
 
 @media (max-width: 1180px) {
   .header-btn {
