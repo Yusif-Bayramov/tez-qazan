@@ -725,6 +725,13 @@ nav .cancel-icon {
     border-bottom-left-radius: 0;
     border-top-right-radius: 10px;
   }
+  #main2 .card1 h1 {
+    font-size: 35px;
+  }
+  #main2 .card1 h2 {
+    font-weight: 500;
+    font-size: 18;
+  }
 }
 @media (max-width: 500px) and (max-width: 664px) {
   .form-c {
