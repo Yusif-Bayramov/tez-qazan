@@ -2,85 +2,87 @@
     position: static;
 }
 
-.card1 {
-    width: 814px;
-    height: 670px;
-    display: flex;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-    border-radius: 10px;
-    gap: 50px;
-    .img {
-        padding: 10px;
-        width: 280px;
-        height: 670px;
-        background-image: url(../img/formbg.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-        .geri-icon {
-            background-color: #fff;
-            color: #333333;
-            padding: 5px 10px;
-            border-radius: 50%;
-            text-align: center;
-        }
-    }
-    .text {
-        padding: 0 20px;
-    }
-    h1 {
-        font-weight: 600;
-        font-size: 45.2036px;
-        line-height: 55px;
-        letter-spacing: 0.05em;
-        color: #333333;
-        margin-bottom: 1rem;
-    }
-    h2 {
-        font-weight: 500;
-        font-size: 22.6018px;
-        line-height: 28px;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        color: #333333;
-        margin-bottom: 1rem;
-    }
-    .btn-c {
-        width: 100%;
+#main2 {
+    width: 100%;
+    .container {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 5rem;
     }
-    .btn {
-        border: 1px solid #FF4242;
-        padding: 8px 25px;
-        border-radius: 50px;
-        color: #FF4242;
-        transition: all .3 ease-in-out;
-        font-weight: 700;
-        font-size: 11.9768px;
-        line-height: 15px;
-        text-align: center;
-        /* identical to box height */
-        letter-spacing: 0.05em;
-        &:hover {
-            color: #ffffff;
-            background-color: #FF4242;
+    .card1 {
+        width: 814px;
+        height: 670px;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        border-radius: 10px;
+        gap: 50px;
+        .img {
+            padding: 10px;
+            width: 280px;
+            height: 670px;
+            background-image: url(../img/formbg.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            .geri-icon {
+                background-color: #fff;
+                color: #333333;
+                padding: 5px 10px;
+                border-radius: 50%;
+                text-align: center;
+            }
+        }
+        .text {
+            padding: 0 20px;
+        }
+        h1 {
+            font-weight: 600;
+            font-size: 45.2036px;
+            line-height: 55px;
+            letter-spacing: 0.05em;
+            color: #333333;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            font-weight: 500;
+            font-size: 22.6018px;
+            line-height: 28px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #333333;
+            margin-bottom: 1rem;
+        }
+        .btn-c {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 5rem;
+        }
+        .btn {
+            border: 1px solid #FF4242;
+            padding: 8px 25px;
+            border-radius: 50px;
+            color: #FF4242;
+            transition: all .3 ease-in-out;
+            font-weight: 700;
+            font-size: 11.9768px;
+            line-height: 15px;
+            text-align: center;
+            /* identical to box height */
+            letter-spacing: 0.05em;
+            &:hover {
+                color: #ffffff;
+                background-color: #FF4242;
+            }
+        }
+        .form-group {
+            label {
+                color: #7E7E7E;
+            }
         }
     }
-    .form-group {
-        label {
-            color: #7E7E7E;
-        }
-    }
-}
-
-.form-c {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 20px;
 }

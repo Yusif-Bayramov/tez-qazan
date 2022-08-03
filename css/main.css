@@ -478,16 +478,25 @@ nav .dropbtn.active {
   position: static;
 }
 
-.card1 {
+#main2 {
+  width: 100%;
+}
+#main2 .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main2 .card1 {
   width: 814px;
   height: 670px;
   display: flex;
   align-items: center;
+  flex-direction: row;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   border-radius: 10px;
   gap: 50px;
 }
-.card1 .img {
+#main2 .card1 .img {
   padding: 10px;
   width: 280px;
   height: 670px;
@@ -497,17 +506,17 @@ nav .dropbtn.active {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-.card1 .img .geri-icon {
+#main2 .card1 .img .geri-icon {
   background-color: #fff;
   color: #333333;
   padding: 5px 10px;
   border-radius: 50%;
   text-align: center;
 }
-.card1 .text {
+#main2 .card1 .text {
   padding: 0 20px;
 }
-.card1 h1 {
+#main2 .card1 h1 {
   font-weight: 600;
   font-size: 45.2036px;
   line-height: 55px;
@@ -515,7 +524,7 @@ nav .dropbtn.active {
   color: #333333;
   margin-bottom: 1rem;
 }
-.card1 h2 {
+#main2 .card1 h2 {
   font-weight: 500;
   font-size: 22.6018px;
   line-height: 28px;
@@ -524,14 +533,14 @@ nav .dropbtn.active {
   color: #333333;
   margin-bottom: 1rem;
 }
-.card1 .btn-c {
+#main2 .card1 .btn-c {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 5rem;
 }
-.card1 .btn {
+#main2 .card1 .btn {
   border: 1px solid #FF4242;
   padding: 8px 25px;
   border-radius: 50px;
@@ -544,19 +553,12 @@ nav .dropbtn.active {
   /* identical to box height */
   letter-spacing: 0.05em;
 }
-.card1 .btn:hover {
+#main2 .card1 .btn:hover {
   color: #ffffff;
   background-color: #FF4242;
 }
-.card1 .form-group label {
+#main2 .card1 .form-group label {
   color: #7E7E7E;
-}
-
-.form-c {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 20px;
 }
 
 @media (max-width: 1180px) {
@@ -712,8 +714,18 @@ nav .cancel-icon {
   #head .head-container h1 {
     font-size: 35px;
   }
+
+  #main2 .card1 {
+    width: 280px;
+    height: 670px;
+    flex-direction: column;
+  }
+  #main2 .card1 .img {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+  }
 }
-@media (max-width: 664px) {
+@media (max-width: 500px) and (max-width: 664px) {
   .form-c {
     display: block;
   }
