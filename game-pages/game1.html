@@ -38,15 +38,13 @@
                 </div>
             </div>
             <button id="answer-button">Cavabla</button>
-            <div   class="circleProgress_wrapper">
-                <div   class="wrapper right">
-                    <div   class="circleProgress rightcircle right_cartoon"  ></div>
-                </div> 
-                <div  class="wrapper left">
-                    <div   class="circleProgress leftcircle left_cartoon"  ></div>
-                </div>
-                <span id="timer">5</span>
-            </div>
+            <svg width="100px" height="100px" viewBox="0 0 42 42" class="donut">
+                <circle id="c1" cx="21" cy="21" r="15.91549430918954" stroke-dasharray="100 0" stroke-dashoffset="100"></circle>
+                <circle id="c2" cx="21" cy="21" r="15.91549430918954" stroke-dasharray="0 100" stroke-dashoffset="0"></circle>
+                <g class="chart-text">
+                    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" id="counterText">5</text>
+                </g>
+            </svg>
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
