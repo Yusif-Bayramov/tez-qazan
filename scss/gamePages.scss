@@ -1,22 +1,88 @@
 $baseRed: #FF4242;
+$baseGreen: #3DD33A;
+$baseYellow: #FFFF00;
 #game1-main {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    justify-content: space-between;
+    padding: 8vh 0;
 }
 
-#main-game-1 {
+#game2-main {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    justify-content: space-between;
+}
+
+/*getting rid of the dot thing next to radio buttons*/
+input[type="radio"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+input[name="fourImage"]:checked+label{
+    img{
+        border-color: $baseYellow;
+        background-color: $baseYellow;
+        padding: 0.1em;
+    }
+}
+
+// label~input[class="fourImage"]:checked{
+//     border-color: $baseYellow;
+// }
+
+#answer-button {
+    transition: all 0.5s;
+    width: 180px;
+    height: 52px;
+    background-color: white;
+    border-radius: 50px;
+    border-color: $baseRed;
+    font-weight: 700;
+    color: $baseRed;
+}
+#answer-button:hover {
+    transition: all 0.5s;
+    background-color: $baseRed;
+    border-radius: 50px;
+    border-color: white;
+    color: white;
+}
+#answer-button:hover {
+    transition: all 0.5s;
+    background-color: $baseRed;
+    border-radius: 50px;
+    border-color: white;
+    color: white;
+}
+#answer-button:focus {
+    background-color: $baseRed;
+    border-radius: 50px;
+    border-color: white;
+    color: white;
+}
+
+#main-game-1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     gap: 4vh;
-    h1 {
-        font-size: 40px;
-        width: 66vw;
-        height: 148.32px;
-        line-height: 148.32px;
+    #gametitle1 {
+        font-weight: 400;
+        font-size: 19px;
+        width: 100vw;
+        max-width: 66vw;
+        padding: 1.5em;
         background-color: $baseRed;
         text-align: center;
         color: white;
@@ -29,94 +95,102 @@ $baseRed: #FF4242;
         justify-content: center;
         flex-shrink: 3;
         gap: 20px;
-        .option {
+        .option img{
             transition: 0.2s;
-            border: 3.5px solid #FFFF00;
+            border: 3.5px solid;
+            border-color: black;
             border-radius: 10px;
-            img {
-                width: 14.9vw;
-            }
         }
-        .option:hover {
+        .option img:hover {
             transition: 0.2s;
             transform: scale(1.05);
         }
-        #option3 {
-            border: 3.5px solid #3DD33A;
+
+        input[name="fourImage"]:checked+label{
+            img{
+                border-color: $baseYellow;
+            }
         }
+
     }
-    #answer-button {
-        transition: all 0.5s;
-        width: 180px;
-        height: 52px;
-        background-color: white;
-        border-radius: 50px;
-        border-color: $baseRed;
-        font-weight: 700;
-        color: $baseRed;
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-    #answer-button:hover {
-        transition: all 0.5s;
-        background-color: $baseRed;
-        border-radius: 50px;
-        border-color: white;
-        color: white;
-    }
-    #answer-button:hover {
-        transition: all 0.5s;
-        background-color: $baseRed;
-        border-radius: 50px;
-        border-color: white;
-        color: white;
-    }
-    #answer-button:focus {
-        background-color: $baseRed;
-        border-radius: 50px;
-        border-color: white;
-        color: white;
-    }
+
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
     // mobile devices
+    #answer-button {
+        width: 52.58px;
+        height: 15.22px;
+    }
     #main-game-1 {
-        h1 {
+        #gametitle1 {
             font-size: 11.6882px;
-            ;
-            width: 66vw;
-            height: 43.34px;
-            line-height: 43.34px;
-            background-color: $baseRed;
-            text-align: center;
-            color: white;
             border-radius: 2.92205px;
         }
         .options-container {
-            gap: 5.7px;
+            display: flex;
+            flex-wrap: wrap;
         }
-        .option {
-            border: 0.58px solid #FFFF00;
-        }
-        #answer-button {
-            width: 52.58px;
-            height: 15.22px;
+        .option img{
+            aspect-ratio: 1/1;
+            border: 0.58px solid black;
+            width:27.5vw;
         }
     }
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
-    // iPads, Tablets
+@media screen and (min-width: 567px) and (max-width: 768px) {
     #main-game-1 {
         gap: 25.47px;
-        h1 {
+        #gametitle1 {
             font-size: 17.922px;
-            height: 66.455;
-            line-height: 66.455px;
             border-radius: 6.04px;
         }
-        #answer-button {
-            width: 52.58px;
-            height: 15.22px;
+        .options-container{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .option img {
+                width: 30vw;
+        }
+        
+    }
+    #main-game-2 {
+        gap: 25.47px;
+        #gametitle2 {
+            font-size: 12px;
+            border-radius: 6.04px;
+        }
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 566px) {
+    #main-game-1 {
+        gap: 25.47px;
+        #gametitle1 {
+            font-size: 17.922px;
+            border-radius: 6.04px;
+        }
+        .options-container{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .option img {
+                width: 29vw;
+        }
+        
+    }
+    #main-game-2 {
+        gap: 25.47px;
+        #gametitle2 {
+            font-size: 12px;
+            border-radius: 6.04px;
         }
     }
 }
@@ -125,16 +199,31 @@ $baseRed: #FF4242;
     // Small screens, laptops
     #main-game-1 {
         gap: 25.47px;
-        h1 {
+        #gametitle1 {
             font-size: 17.922px;
-            height: 66.455;
-            line-height: 66.455px;
             border-radius: 6.04px;
         }
-        #answer-button {
-            width: 52.58px;
-            height: 15.22px;
+        .option img {
+                width: 13.5vw;
+            }
+    }
+    #main-game-2 {
+        gap: 25.47px;
+        #gametitle2 {
+            font-size: 17.922px;
+            border-radius: 6.04px;
         }
+    }
+}
+
+@media screen and (min-width: 1440px){
+    #main-game-1 {
+    .option img {
+            width: 15.4vw;
+        }
+    }
+    #gametitle1,#gametitle2{
+        font-size: 1vw;
     }
 }
 
@@ -160,7 +249,7 @@ circle {
     animation: heartBeat 5s;
 }
 
-#counterText {}
+
 
 @keyframes heartBeat {
     0% {
@@ -174,5 +263,131 @@ circle {
     }
     75% {
         stroke: #c92516;
+    }
+}
+
+#game2-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#main-game-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 4vh;
+    #gametitle2 {
+        font-weight: 400;
+        font-size: 19px;
+        width: 100vw;
+        max-width: 70vw;
+        padding: 1.5em;
+        background-color: $baseRed;
+        text-align: center;
+        color: white;
+        border-radius: 10px;
+    }
+    #image{
+        text-align: center;
+        img{
+           width: 35%; 
+        }
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #options{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    input[value="no"]+label,input[value="yes"]+label{
+        transition: 0.4s;
+        width: 104px;
+        height: 62.34px;
+        font-weight: 700;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    input[value="yes"]+label{border: 2px solid $baseGreen;}
+    input[value="no"]+label{border: 2px solid $baseRed;}
+
+    input[value="yes"]+label:hover{
+        background-color: #3DD33A;
+        color: white;
+    }
+
+    input[value="no"]+label:hover{
+        background-color: $baseRed;
+        color: white;
+    }
+
+    input[value="yes"]:checked+label{
+        background-color: #3DD33A;
+        color: white;
+    }
+
+    input[value="no"]:checked+label{
+        background-color: $baseRed;
+        color: white;
+    }
+
+
+    #answer-button {
+        color: black;
+        border-color: $baseYellow;
+    }
+    #answer-button:hover {
+        color: white;
+        background-color: $baseYellow;
+    } 
+    #answer-button:focus {
+        background-color: $baseYellow;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    // mobile devices
+    #main-game-2 {
+        #gametitle1 {
+            font-size: 11.6882px;
+            border-radius: 2.92205px;
+        }
+
+        #answer-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5%;
+            font-size: 11.6882px;
+            width: 82px;
+            height: 16px;
+        }
+    }
+    #main-game-1{
+        #answer-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5%;
+            font-size: 11.6882px;
+            width: 82px;
+            height: 16px;
+        }
     }
 }

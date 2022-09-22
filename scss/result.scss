@@ -1,0 +1,126 @@
+#result-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    #title{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 49px;
+    }
+    #correct_wrong{
+        display: flex;
+        flex-direction: row;
+        gap: 5vw;
+        #correct{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 25px;
+            
+            #number_green{
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 40px;
+                // line-height: 49px;
+                color: #12C402;
+            }
+        }
+        #wrong{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 25px;
+            #number_red{
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 40px;
+                // line-height: 49px;
+                color: #FF0000;
+            }
+        }
+    }
+    #toplamBal{
+        #toplamBalTitle{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+        }
+        #toplamBalNumber{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 50px;
+            text-align: center;
+            color: #12C402;
+        }
+    }
+
+    #home-button {
+        transition: all 0.5s;
+        width: 180px;
+        height: 52px;
+        background-color: white;
+        border-radius: 50px;
+        border-color: $baseRed;
+        font-weight: 700;
+        color: $baseRed;
+    }
+    #home-button:hover {
+        transition: all 0.5s;
+        background-color: $baseRed;
+        border-radius: 50px;
+        border-color: white;
+        color: white;
+    }
+    #home-button:hover {
+        transition: all 0.5s;
+        background-color: $baseRed;
+        border-radius: 50px;
+        border-color: white;
+        color: white;
+    }
+    #home-button:focus {
+        background-color: $baseRed;
+        border-radius: 50px;
+        border-color: white;
+        color: white;
+    }
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 23vh 0;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    #result-body{
+        #correct_wrong{
+            #correct{
+                font-size: 15px;
+                #number_green{
+                    font-size: 20px;
+                }
+            }
+            #wrong{
+                font-size: 15px;
+                #number_red{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

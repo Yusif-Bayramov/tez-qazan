@@ -20,27 +20,31 @@
         </nav>
     </header>
 
-    <main id="main2">
-        <section class="form-c">
-            <div class="container">
-                <div class="card1">
-                    <div class="img"><a href="../index.html" class="geri-icon"><i class="fa-solid fa-angle-left"></i></a></div>
-                    <div class="text">
-                        <h2>Oyuna Qoşulmaq Üçün</h2>
-                        <h1>DAXİL OL</h1>
-                        <div class="form-group">
-                            <label for="">Nömrəniz</label>
-                            <div class="form-number">
-                                
-                                <input type="tel" id="phone" pattern="[0-9]{9}" required type="text" inputmode="decimal" autocomplete="one-time-code" name=""  class="form-control" placeholder="" aria-describedby="helpId">
-                            </div>
-                            <small id="helpId">Telefonunuza birdəfəlik şifrə göndəriləcək.</small>
-                        </div>
-                        <div class="btn-c"> <a href="#" class="btn">Daxil Ol</a></div>
-                    </div>
+    <main id="game2-main">
+        <div id="main-game-2">
+            <h1 id="gametitle2">Rəsimdəki canlı gəmiricidirmi?</h1>
+            <div id="image-container">
+                <div id="image">
+                    <img src="../img/gemirici.jpg" alt="rabbit">
                 </div>
+                </div>
+            <form>
+            <div id="options">
+                <input type="radio" id="yes" name="yesno" value="yes">
+                <label for="yes">HƏ</label>
+                <input type="radio" id="no" name="yesno" value="no">
+                <label for="no">YOX</label>
             </div>
-        </section>
+            <button id="answer-button">Cavabla</button>
+            </form>
+            <svg width="100px" height="100px" viewBox="0 0 42 42" class="donut">
+                <circle id="c1" cx="21" cy="21" r="15.91549430918954" stroke-dasharray="100 0" stroke-dashoffset="100"></circle>
+                <circle id="c2" cx="21" cy="21" r="15.91549430918954" stroke-dasharray="0 100" stroke-dashoffset="0"></circle>
+                <g class="chart-text">
+                    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" id="counterText">5</text>
+                </g>
+            </svg>
+        </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
