@@ -608,12 +608,6 @@ input[type=radio] {
   display: none;
 }
 
-input[name=fourImage]:checked + label img {
-  border-color: #FFFF00;
-  background-color: #FFFF00;
-  padding: 0.1em;
-}
-
 #answer-button {
   transition: all 0.5s;
   width: 180px;

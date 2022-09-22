@@ -26,17 +26,7 @@ input[type="radio"] {
     display: none;
 }
 
-input[name="fourImage"]:checked+label{
-    img{
-        border-color: $baseYellow;
-        background-color: $baseYellow;
-        padding: 0.1em;
-    }
-}
 
-// label~input[class="fourImage"]:checked{
-//     border-color: $baseYellow;
-// }
 
 #answer-button {
     transition: all 0.5s;
