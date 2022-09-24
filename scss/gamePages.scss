@@ -16,6 +16,7 @@ $baseYellow: #FFFF00;
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
+    padding: 8vh 0;
 }
 
 /*getting rid of the dot thing next to radio buttons*/
@@ -305,8 +306,9 @@ circle {
 
     input[value="no"]+label,input[value="yes"]+label{
         transition: 0.4s;
-        width: 104px;
-        height: 62.34px;
+        width: minmax(34px,104px);
+        height: mixmax(30px,62.34px);
+        padding: 0.5em 1em 0.5em 1em;
         font-weight: 700;
         border-radius: 5px;
         display: flex;
@@ -380,4 +382,59 @@ circle {
             height: 16px;
         }
     }
+}
+
+@media screen and (min-width:320px) and (max-width: 631px) {
+    input[value="no"]+label,input[value="yes"]+label{
+        padding: 0.5em 1em 0.5em 1em;
+        font-size: 2vw;
+    }
+}
+
+input[name="img4text"]+label{
+    transition: 0.4s;
+    border: 1px solid;
+    border-color: black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+input[name="text4text"]+label{
+    transition: 0.4s;
+    border: 1px solid;
+    border-color: black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+input[name="img4text"]:checked+label{
+    color: white;
+    border-color: $baseGreen;
+    background-color: $baseGreen;
+}
+
+input[name="text4text"]:checked+label{
+    color: white;
+    border-color: $baseGreen;
+    background-color: $baseGreen;
+}
+
+#options-game-3{
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1vw;
+    flex-wrap: wrap;
+}
+
+#options-game-4{
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:1vh;
+    flex-wrap: wrap;
 }

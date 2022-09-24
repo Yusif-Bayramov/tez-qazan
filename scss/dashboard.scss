@@ -1,0 +1,28 @@
+#dashboard{
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    padding: 5em 0;
+    #success{
+        color: green;
+        font-weight: bolder;
+    }
+    #success-start,#success-start:visited{
+        transition: 0.5s;
+        background-color: red;
+        border: 3.5px solid red;
+        color: white;
+        padding: 1em 0.5em 1em 0.5em;
+        border-radius: 5px;
+    }
+    #success-start:hover{
+        background-color: white;
+        border: 3.5px solid red;
+        color: red;
+        padding: 1em 0.5em 1em 0.5em;
+        border-radius: 5px;
+    }
+}

@@ -598,6 +598,7 @@ nav .dropbtn.active {
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
+  padding: 8vh 0;
 }
 
 /*getting rid of the dot thing next to radio buttons*/
@@ -870,8 +871,9 @@ circle {
 }
 #main-game-2 input[value=no] + label, #main-game-2 input[value=yes] + label {
   transition: 0.4s;
-  width: 104px;
-  height: 62.34px;
+  width: minmax(34px, 104px);
+  height: mixmax(30px, 62.34px);
+  padding: 0.5em 1em 0.5em 1em;
   font-weight: 700;
   border-radius: 5px;
   display: flex;
@@ -937,6 +939,59 @@ circle {
     height: 16px;
   }
 }
+@media screen and (min-width: 320px) and (max-width: 631px) {
+  input[value=no] + label, input[value=yes] + label {
+    padding: 0.5em 1em 0.5em 1em;
+    font-size: 2vw;
+  }
+}
+input[name=img4text] + label {
+  transition: 0.4s;
+  border: 1px solid;
+  border-color: black;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+input[name=text4text] + label {
+  transition: 0.4s;
+  border: 1px solid;
+  border-color: black;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+input[name=img4text]:checked + label {
+  color: white;
+  border-color: #3DD33A;
+  background-color: #3DD33A;
+}
+
+input[name=text4text]:checked + label {
+  color: white;
+  border-color: #3DD33A;
+  background-color: #3DD33A;
+}
+
+#options-game-3 {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  flex-wrap: wrap;
+}
+
+#options-game-4 {
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1vh;
+  flex-wrap: wrap;
+}
+
 @media (max-width: 1180px) {
   .header-btn {
     font-size: 11.9717px;
@@ -1250,4 +1305,32 @@ nav .cancel-icon {
   #result-body #correct_wrong #wrong #number_red {
     font-size: 20px;
   }
+}
+#dashboard {
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  padding: 5em 0;
+}
+#dashboard #success {
+  color: green;
+  font-weight: bolder;
+}
+#dashboard #success-start, #dashboard #success-start:visited {
+  transition: 0.5s;
+  background-color: red;
+  border: 3.5px solid red;
+  color: white;
+  padding: 1em 0.5em 1em 0.5em;
+  border-radius: 5px;
+}
+#dashboard #success-start:hover {
+  background-color: white;
+  border: 3.5px solid red;
+  color: red;
+  padding: 1em 0.5em 1em 0.5em;
+  border-radius: 5px;
 }
