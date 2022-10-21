@@ -179,9 +179,16 @@ nav .dropbtn.active {
   justify-content: space-between;
 }
 #header-content .header-text {
+  margin-left: 0;
+  padding-left: 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #header-content .header-text h1 {
+  display: flex;
   font-weight: 800;
   font-size: 70px;
   line-height: 93px;
@@ -191,6 +198,9 @@ nav .dropbtn.active {
   padding-bottom: 10px;
 }
 #header-content .header-text h4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
@@ -200,7 +210,17 @@ nav .dropbtn.active {
   letter-spacing: 0.05em;
   color: #333333;
 }
+#header-content .header-text #h4title {
+  width: 30rem;
+  font-size: 30rem;
+  display: flex;
+}
 #header-content .header-text p {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
@@ -209,7 +229,7 @@ nav .dropbtn.active {
   text-align: center;
   letter-spacing: 0.1em;
   color: #333333;
-  padding: 20px 0;
+  padding: 20px;
 }
 #header-content .header-img {
   width: 518px;
@@ -270,7 +290,7 @@ nav .dropbtn.active {
 }
 #qalib-siyahsi .scoll-table {
   width: 100%;
-  height: 600px;
+  max-height: 600px;
   overflow: scroll;
 }
 #qalib-siyahsi table {
@@ -494,7 +514,7 @@ nav .dropbtn.active {
   flex-direction: row;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   border-radius: 10px;
-  gap: 40px;
+  gap: 10px;
 }
 #main2 .card1 .img {
   padding: 10px;
@@ -538,7 +558,6 @@ nav .dropbtn.active {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 5rem;
 }
 #main2 .card1 .btn {
   border: 1px solid #FF4242;
@@ -589,7 +608,8 @@ nav .dropbtn.active {
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  padding: 8vh 0;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
 }
 
 #game2-main {
@@ -598,7 +618,8 @@ nav .dropbtn.active {
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  padding: 8vh 0;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
 }
 
 /*getting rid of the dot thing next to radio buttons*/
@@ -610,6 +631,7 @@ input[type=radio] {
 }
 
 #answer-button {
+  cursor: pointer;
   transition: all 0.5s;
   width: 180px;
   height: 52px;
@@ -654,7 +676,7 @@ input[type=radio] {
 }
 #main-game-1 #gametitle1 {
   font-weight: 400;
-  font-size: 19px;
+  font-size: 1em;
   width: 100vw;
   max-width: 66vw;
   padding: 1.5em;
@@ -841,7 +863,7 @@ circle {
 }
 #main-game-2 #gametitle2 {
   font-weight: 400;
-  font-size: 19px;
+  font-size: 1em;
   width: 100vw;
   max-width: 70vw;
   padding: 1.5em;
@@ -854,7 +876,7 @@ circle {
   text-align: center;
 }
 #main-game-2 #image img {
-  width: 35%;
+  width: 35vw;
 }
 #main-game-2 form {
   display: flex;
@@ -869,7 +891,10 @@ circle {
   align-items: center;
   gap: 20px;
 }
-#main-game-2 input[value=no] + label, #main-game-2 input[value=yes] + label {
+#main-game-2 button[value=no], #main-game-2 button[value=yes] {
+  font-size: 1em;
+  cursor: pointer;
+  user-select: none;
   transition: 0.4s;
   width: minmax(34px, 104px);
   height: mixmax(30px, 62.34px);
@@ -880,17 +905,19 @@ circle {
   justify-content: center;
   align-items: center;
 }
-#main-game-2 input[value=yes] + label {
+#main-game-2 button[value=yes] {
   border: 2px solid #3DD33A;
+  background-color: white;
 }
-#main-game-2 input[value=no] + label {
+#main-game-2 button[value=no] {
   border: 2px solid #FF4242;
+  background-color: white;
 }
-#main-game-2 input[value=yes] + label:hover {
+#main-game-2 button[value=yes]:hover {
   background-color: #3DD33A;
   color: white;
 }
-#main-game-2 input[value=no] + label:hover {
+#main-game-2 button[value=no]:hover {
   background-color: #FF4242;
   color: white;
 }
@@ -940,25 +967,47 @@ circle {
   }
 }
 @media screen and (min-width: 320px) and (max-width: 631px) {
-  input[value=no] + label, input[value=yes] + label {
+  button[value=no], button[value=yes] {
     padding: 0.5em 1em 0.5em 1em;
     font-size: 2vw;
   }
 }
 input[name=img4text] + label {
+  cursor: pointer;
+  user-select: none;
   transition: 0.4s;
   border: 1px solid;
   border-color: black;
   border-radius: 5px;
   padding: 10px;
+  width: 10.5em;
+  text-align: center;
+  font-weight: bolder;
+}
+
+input[name=img4text] + label:hover {
+  background-color: #55ff52;
+  border-color: #55ff52;
+  color: white;
 }
 
 input[name=text4text] + label {
+  font-size: 0.9em;
+  cursor: pointer;
   transition: 0.4s;
   border: 1px solid;
   border-color: black;
   border-radius: 5px;
   padding: 10px;
+  width: 10.5em;
+  text-align: center;
+  font-weight: bolder;
+}
+
+input[name=text4text] + label:hover {
+  background-color: #55ff52;
+  border-color: #55ff52;
+  color: white;
 }
 
 input[name=img4text]:checked + label {
@@ -990,6 +1039,10 @@ input[name=text4text]:checked + label {
   justify-content: center;
   gap: 1vh;
   flex-wrap: wrap;
+}
+
+form #options button {
+  padding: 1rem 2rem;
 }
 
 @media (max-width: 1180px) {
@@ -1263,13 +1316,6 @@ nav .cancel-icon {
   border-color: #FF4242;
   font-weight: 700;
   color: #FF4242;
-}
-#result-body #home-button:hover {
-  transition: all 0.5s;
-  background-color: #FF4242;
-  border-radius: 50px;
-  border-color: white;
-  color: white;
 }
 #result-body #home-button:hover {
   transition: all 0.5s;

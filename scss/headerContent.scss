@@ -11,8 +11,15 @@
         justify-content: space-between;
     }
     .header-text {
+        margin-left: 0;
+        padding-left: 0;
         text-align: center;
+        display: flex;;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         h1 {
+            display: flex;
             font-weight: 800;
             font-size: 70px;
             line-height: 93px;
@@ -22,6 +29,9 @@
             padding-bottom: 10px;
         }
         h4 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-family: 'Montserrat';
             font-style: normal;
             font-weight: 600;
@@ -31,7 +41,18 @@
             letter-spacing: 0.05em;
             color: #333333;
         }
+        #h4title{
+            width: 30rem;
+            font-size: 30rem;
+            display: flex;
+
+        }
         p {
+            display: flex;
+            flex: 1;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
             font-family: 'Montserrat';
             font-style: normal;
             font-weight: 500;
@@ -40,7 +61,7 @@
             text-align: center;
             letter-spacing: 0.1em;
             color: #333333;
-            padding: 20px 0;
+            padding: 20px ;
         }
     }
     .header-img {

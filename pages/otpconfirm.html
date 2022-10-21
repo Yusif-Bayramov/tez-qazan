@@ -15,7 +15,7 @@
     <header id="header">
         <nav class="form-nav">
             <div class="nav-mobil-items">
-                <div class="logo"><a href="./index.html">Logo</a></div>
+                <div class="logo"><a href="../index.html">Logo</a></div>
             </div>
         </nav>
     </header>
@@ -24,24 +24,19 @@
         <section class="form-c">
             <div class="container">
                 <div class="card1">
-                    <div class="img"><a href="../index.html" class="geri-icon"><i class="fa-solid fa-angle-left"></i></a></div>
+                    <div class="img"><a href="qeydiyyat.html" class="geri-icon"><i class="fa-solid fa-angle-left"></i></a></div>
                     <div class="text">
                         <h2>Oyuna Qoşulmaq Üçün</h2>
                         <h1>DAXİL OL</h1>
-                        <div class="form-group-2">
-                            <label for="">+9945******75 nömrəsinə göndərilən OTP-ni daxil et
-                            </label>
+                        <div class="form-group">
+                            <label for="">+9945******75 nömrəsinə göndərilən OTP-ni daxil et</label>
                             <form method="get" class="digit-group" id="inputs" data-group-name="digits" data-autosubmit="false" autocomplete="off">
-                                <div class="otp-box">
-                                    <input type="text" maxlength="1">
-                                    <input type="text" maxlength="1">
-                                    <input type="text" maxlength="1">
-                                    <input type="text" maxlength="1">
-                                    <input type="text" maxlength="1">
+                                <div class="form-number">
+                                    <input type="tel" pattern="[0-9]{5}" required inputmode="decimal" autocomplete="one-time-code" name="otp" id="otp" class="form-control" placeholder="" aria-describedby="helpId">
                                 </div>
                             </form>
                         </div>
-                        <div class="btn-c"> <a href="#" class="btn">Daxil Ol</a></div>
+                        <div class="btn-c"> <a href="dashboard.html" class="btn">Daxil Ol</a></div>
                     </div>
                 </div>
             </div>
@@ -50,56 +45,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
-    <script src="../js/script.js "></script>
-    <script>
-const inputs = document.querySelectorAll(".otp-box input");
-console.log(inputs);
-inputs.forEach((input,index)=>{
-    input.dataset.index = index;
-    input.addEventListener('paste',handleOtp);
-    input.addEventListener('keyup',handleOtp);
-});
-
-function handleOtpPaste(e){
-    const data = e.clipboardData.getData('text');
-    const value = data.split('');
-    if (value.length === inputs.length){
-        inputs.forEach((input, index) =>(input.value = value[index]));
-        submit();
-    }
-}
-
-function handleOtp(e){
-    const input = e.target;
-    let value = input.value;
-    input.value = '';
-    input.value = value ? value[0] : '';
-
-    let fieldIndex = input.dataset.index;
-    if(value.length > 0 && fieldIndex < inputs.length - 1){
-        input.nextElementSibling.focus();
-    }
-
-    if(e.key === 'Backspace' && fieldIndex > 0){
-        input.previousElementSibling.focus();
-    }
-
-    if(fieldIndex == inputs.length-1){
-        submit();
-    }
-}
-
-function submit(){
-    console.log("submitting");
-    let OTP = '';
-    inputs.forEach((input)=>{
-        OTP += input.value;
-        input.disabled = true;
-        input.classList.add('disabled');
-    })
-    console.log(OTP);
-}
-    </script>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>

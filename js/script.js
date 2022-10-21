@@ -77,3 +77,27 @@ window.onclick = function(event) {
         }
     }
 }
+
+     // Array inputs
+     const radioInputs = document.querySelectorAll('input[type="radio"]');
+
+     // Array false & true.
+     const array = [];
+ 
+     for(let i = 0; i < radioInputs.length; i++)
+     {
+       array[i] = false;
+       // create event handler onClick
+       radioInputs[i].addEventListener('click',function()
+       {
+           //if item has checked before
+           if(array[i] == true)
+           {
+             radioInputs[i].checked = false;
+             array[i] = false;
+             return; // return or will set to ture value
+           }
+           // set to true.
+           array[i] = true;
+       });
+     }
